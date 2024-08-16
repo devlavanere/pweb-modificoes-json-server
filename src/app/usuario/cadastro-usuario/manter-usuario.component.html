@@ -1,0 +1,23 @@
+<mat-card class="card-insercao">
+    <mat-card-content>
+        <mat-form-field>
+            <mat-label>Id</mat-label>
+            <input matInput [(ngModel)]="usuario.id">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Nome</mat-label>
+            <input matInput [(ngModel)]="usuario.nome">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Idade</mat-label>
+            <input matInput [(ngModel)]="usuario.idade">
+        </mat-form-field>
+    </mat-card-content>
+</mat-card>
+
+<button mat-icon-button (click)="inserir()">
+    <mat-icon *ngIf="!modoEdicao">add</mat-icon>
+    <mat-icon *ngIf="modoEdicao">save</mat-icon>
+</button>
+

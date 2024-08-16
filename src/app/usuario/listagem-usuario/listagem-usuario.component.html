@@ -1,0 +1,14 @@
+@for (usuario of usuarios; track $index) {
+    <mat-card class="card-usuario">
+        <mat-card-header>{{ usuario.nome }}</mat-card-header>
+        <mat-card-content> O {{ usuario.nome }} tem idade {{ usuario.idade }} e estuda no IF. ...</mat-card-content>
+        <mat-card-actions>
+            <button mat-icon-button (click)="editar(usuario)">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button (click)="remover(usuario)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </mat-card-actions>
+    </mat-card>
+}
